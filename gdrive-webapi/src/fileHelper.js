@@ -11,10 +11,9 @@ export default class FileHelper {
                         file => fs.promises.stat(`${downloadsFolder}/${file}`)
                     )
             )
-        
         const filesStatuses = []
-        for( const fileIndex in currentFiles) {
-            const { birthtime, size} = statuses[fileIndex]
+        for (const fileIndex in currentFiles) {
+            const { birthtime, size } = statuses[fileIndex]
             filesStatuses.push({
                 size: prettyBytes(size),
                 file: currentFiles[fileIndex],
