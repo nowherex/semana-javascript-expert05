@@ -48,8 +48,6 @@ export default class AppController {
                         .reduce((total, current) => total = current, 0)
 
         
-        console.log('total', total)
-        
         this.viewManager.updateStatus(total)
     }
 
